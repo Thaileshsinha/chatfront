@@ -2,9 +2,10 @@ import "./App.css";
 import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "./Chat";
-import "dotenv/config";
 
-const socket = io.connect(process.env.BACKEND_LINK || "http://localhost:3001");
+const socket = io.connect(
+  "https://chatback-beta.vercel.app" || "http://localhost:3001"
+);
 
 function App() {
   const [username, setUsername] = useState("");
